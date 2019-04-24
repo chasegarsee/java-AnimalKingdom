@@ -1,6 +1,9 @@
 package animalKingdomApp;
 
+import java.util.*;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,6 +29,7 @@ public class Main {
         for (AbstractAnimal a : animalsArrayList) {
             System.out.println(a.getId() + " " + a.getName() + " " + a.getYear() + " " + a.move() + " " + a.reproduce()
                     + " " + a.breath());
+
         }
         System.out.println("**  ALL AMIMALS IN DECENDING ORDER BY YEAR NAMED  **");
         animalsArrayList.sort((a1, a2) -> a2.getYear() - a1.getYear());
@@ -44,20 +48,20 @@ public class Main {
 
         System.out.println("**ALL ANIMALS THAT BREATHE WITH LUNGS **");
         ArrayList<AbstractAnimal> filteredAnimals = new ArrayList<>(animalsArrayList);
-        filteredAnimals.removeIf(a -> !a.breath().equals("lungs"));
+        filteredAnimals.removeIf(a -> !a.breath().equals("Lungs"));
         filteredAnimals.forEach(a -> System.out.println(a.getName() + " breaths with " + a.breath()));
         System.out.println("\n");
 
         System.out.println("** ALL ANIMALS THAT BREATH WITH LUNGS AND WERE NAMED IN 1758 **");
         ArrayList<AbstractAnimal> filteredAnimals2 = new ArrayList<>(animalsArrayList);
-        filteredAnimals2.removeIf(a -> !(a.breath().equals("lungs") && a.getYear() == 1758));
+        filteredAnimals2.removeIf(a -> !(a.breath().equals("Lungs") && a.getYear() == 1758));
         filteredAnimals2.forEach(a -> System.out
                 .println(a.getName() + " breaths with " + a.breath() + " and was named in " + a.getYear()));
         System.out.println("\n");
 
         System.out.println("** ALL ANIMALS THAT LAY EGGS AND BRETHE WITH LUNGS **");
         ArrayList<AbstractAnimal> filteredAnimals3 = new ArrayList<>(animalsArrayList);
-        filteredAnimals3.removeIf(a -> !(a.breath().equals("lungs") && a.reproduce().equals("eggs")));
+        filteredAnimals3.removeIf(a -> !(a.breath().equals("Lungs") && a.reproduce().equals("Eggs")));
         filteredAnimals3.forEach(
                 a -> System.out.println(a.getName() + " breaths with " + a.breath() + " lays " + a.reproduce()));
         System.out.println("\n");

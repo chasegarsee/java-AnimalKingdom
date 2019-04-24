@@ -39,6 +39,7 @@ public abstract class AbstractAnimal {
 
     public void eat() {
         System.out.println(name + " ate some food!");
+
     }
 
     public abstract String move();

@@ -2,7 +2,6 @@ package animalKingdomApp;
 
 public class Birds extends AbstractAnimal {
     public Birds(String name, int year) {
-
         super(name, year);
     }
 
