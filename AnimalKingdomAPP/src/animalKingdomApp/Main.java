@@ -31,5 +31,11 @@ public class Main {
         animalsArrayList.sort((a1, a2) -> a2.getYear() - a1.getYear());
         animalsArrayList.forEach(a -> System.out.println(a.getName() + " " + a.getYear()));
         System.out.println("\n");
+
+        System.out.println("** ALL ANIMALS APHABETICALLY **");
+        animalsArrayList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        animalsArrayList.forEach(a -> System.out.println(a.getName()));
+        System.out.println("\n");
+
     }
 }
