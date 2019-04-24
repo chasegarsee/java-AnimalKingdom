@@ -27,6 +27,9 @@ public class Main {
             System.out.println(a.getId() + " " + a.getName() + " " + a.getYear() + " " + a.move() + " " + a.reproduce()
                     + " " + a.breath());
         }
-        System.out.println("All animals in descending order by the year they were named");
+        System.out.println("**  ALL AMIMALS IN DECENDING ORDER BY YEAR NAMED  **");
+        animalsArrayList.sort((a1, a2) -> a2.getYear() - a1.getYear());
+        animalsArrayList.forEach(a -> System.out.println(a.getName() + " " + a.getYear()));
+        System.out.println("\n");
     }
 }
