@@ -1,18 +1,19 @@
 package animalKingdomApp;
 
-public class Mammals extends AbstractAnimal {
-    public Mammals(String name, int year) {
+public class Birds extends AbstractAnimal {
+    public Birds(String name, int year) {
+
         super(name, year);
     }
 
     @Override
     public String move() {
-        return "Walks";
+        return "Flies";
     }
 
     @Override
     public String reproduce() {
-        return "Live Births";
+        return "Eggs";
     }
 
     @Override
@@ -22,6 +23,6 @@ public class Mammals extends AbstractAnimal {
 
     @Override
     public String toString() {
-        return (this.getName() + " is a mammal, was named in " + this.getYear());
+        return (this.getName() + " is a bird, and was named in " + this.getYear());
     }
 }
